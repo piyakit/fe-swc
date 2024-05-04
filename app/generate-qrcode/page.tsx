@@ -23,23 +23,25 @@ const Page = () => {
 
   const [url, setUrl] = useState('')
   return (
-    <div className="App">
+    <>
       <br />
-      <Input value={url} onChange={(e) => setUrl(e.target.value)} placeholder='Url' />
-      <QRCode
-        value={url} // here you should keep the link/value(string) for which you are generation promocode
-        size={350} // the dimension of the QR code (number)
-        logoImage="/logo.svg" // URL of the logo you want to use, make sure it is a dynamic url
-        logoHeight={60}
-        logoWidth={60}
-        logoOpacity={1}
-        enableCORS={true} // enabling CORS, this is the thing that will bypass that DOM check
-        qrStyle="squares" // type of qr code, wether you want dotted ones or the square ones
-        eyeRadius={10} // radius of the promocode eye
-        id={"QR"}
-      />
-      <Button onClick={downloadCode}>Download QR Code</Button>
-    </div>
+      <Input value={url} onChange={(e) => setUrl(e.target.value)} placeholder='Url' className='mb-2' />
+
+        <QRCode
+          value={url} // here you should keep the link/value(string) for which you are generation promocode
+          size={350} // the dimension of the QR code (number)
+          logoImage="/logo.svg" // URL of the logo you want to use, make sure it is a dynamic url
+          logoHeight={60}
+          logoWidth={60}
+          logoOpacity={1}
+          enableCORS={true} // enabling CORS, this is the thing that will bypass that DOM check
+          qrStyle="squares" // type of qr code, wether you want dotted ones or the square ones
+          eyeRadius={10} // radius of the promocode eye
+          id={"QR"}
+
+        />
+      <Button onClick={downloadCode} className='mt-2'>Download QR Code</Button>
+    </>
   )
 }
 
