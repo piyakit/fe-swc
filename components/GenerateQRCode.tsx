@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { QRCode } from "react-qrcode-logo";
-import { Label } from "@/components/ui/label";
 
 const GenerateQRCode = () => {
   const downloadCode = () => {
@@ -22,19 +22,8 @@ const GenerateQRCode = () => {
 
   const [url, setUrl] = useState("");
   const [fg, setFg] = useState("#000");
-  const [qrStyle, setQrStyle] = useState("squares");
+  const [bgQr, setBgQr] = useState("#ffffff");
 
-  useState(() => {
-    setQrStyle("squares");
-  });
-
-  const handleFgColor = (e: string) => {
-    setFg(e);
-  };
-
-  const handleQrStyle = (e: string) => {
-    setQrStyle(e);
-  };
   return (
     <section className="px-[20vw] pt-20 flex flex-col justify-center items-center">
       <div className="mt-8 w-[40vw]">
@@ -47,17 +36,20 @@ const GenerateQRCode = () => {
           placeholder="https://"
           className="mb-8 mt-2"
         />
-        <Button className="" onClick={() => handleFgColor("#FF0000")}>
-          red
-        </Button>
-        <Button className="" onClick={() => handleFgColor("#000")}>
-          black
-        </Button>
-
-        <div className="mt-8">
-          <Button onClick={() => setQrStyle("squares")}>squares</Button>
-          <Button onClick={() => setQrStyle("dots")}>dots</Button>
-        </div>
+        <Label htmlFor="terms">Foreground color</Label>
+        <Input
+          type="color"
+          value={fg}
+          onChange={(e) => setFg(e.target.value)}
+          className="mt-2 mb-8"
+        />
+        <Label htmlFor="terms">background color</Label>
+        <Input
+          type="color"
+          value={bgQr}
+          onChange={(e) => setBgQr(e.target.value)}
+          className="mt-2 mb-8"
+        />
       </div>
 
       <QRCode
@@ -72,7 +64,8 @@ const GenerateQRCode = () => {
         eyeRadius={10} // radius of the promocode eye
         id={"QR"}
         fgColor={fg}
-        bgColor="#fff"
+        bgColor={bgQr}
+        style={{ borderRadius: "10px" }}
       />
 
       <Button onClick={downloadCode} className="mt-8">
