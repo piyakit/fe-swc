@@ -22,9 +22,9 @@ const Page = () => {
   };
 
   const [url, setUrl] = useState("");
+
   return (
     <>
-      <br />
       <Input
         value={url}
         onChange={(e) => setUrl(e.target.value)}
