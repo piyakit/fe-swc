@@ -21,7 +21,7 @@ const GenerateQRCode = () => {
   };
 
   const [url, setUrl] = useState("");
-  const [fg, setFg] = useState("#000");
+  const [fg, setFg] = useState("#000000");
   const [bgQr, setBgQr] = useState("#ffffff");
 
   return (

@@ -27,7 +27,7 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
           > */}
-            <Image src={"/logo.svg"} width={100} height={70} alt={""} />
+            <Image src={"/logo.svg"} width={100} height={70} alt={""} className="w-[150px] h-auto"  priority/>
           {/* </a> */}
         </h1>
       </div>
