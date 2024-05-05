@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { QRCode } from "react-qrcode-logo";
+import { Label } from "@/components/ui/label"
 
 const GenerateQRCode = () => {
   const downloadCode = () => {
@@ -22,12 +23,15 @@ const GenerateQRCode = () => {
   const [url, setUrl] = useState("");
   return (
     <section className="px-[20vw] pt-20 flex flex-col justify-center items-center">
-      <Input
-        value={url}
-        onChange={(e) => setUrl(e.target.value)}
-        placeholder="Url"
-        className="mb-8 mt-8"
-      />
+      <div className="mt-8 w-[40vw]">
+        <Label htmlFor="terms" className="">Url</Label>
+        <Input
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
+          placeholder="https://"
+          className="mb-8 mt-2"
+        />
+      </div>
 
       <QRCode
         value={url} // here you should keep the link/value(string) for which you are generation promocode
