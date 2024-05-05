@@ -44,6 +44,7 @@ const Page = () => {
         eyeRadius={10} // radius of the promocode eye
         id={"QR"}
       />
+
       <Button onClick={downloadCode} className="mt-2">
         Download QR Code
       </Button>
