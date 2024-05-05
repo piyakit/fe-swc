@@ -68,7 +68,7 @@ const GenerateQRCode = () => {
         logoWidth={80}
         logoOpacity={1}
         enableCORS={true} // enabling CORS, this is the thing that will bypass that DOM check
-        qrStyle={qrStyle} // type of qr code, wether you want dotted ones or the square ones
+        qrStyle='squares' // type of qr code, wether you want dotted ones or the square ones
         eyeRadius={10} // radius of the promocode eye
         id={"QR"}
         fgColor={fg}
