@@ -21,22 +21,20 @@ const GenerateQRCode = () => {
   };
 
   const [url, setUrl] = useState("");
-  const [fg, setFg] = useState("#000")
-  const [qrStyle, setQrStyle] = useState('squares')
+  const [fg, setFg] = useState("#000");
+  const [qrStyle, setQrStyle] = useState("squares");
 
-  useState(()=>{
-    setQrStyle('squares')
-  })
-
-  
+  useState(() => {
+    setQrStyle("squares");
+  });
 
   const handleFgColor = (e: string) => {
-    setFg(e)
-  }
+    setFg(e);
+  };
 
   const handleQrStyle = (e: string) => {
-    setQrStyle(e)
-  }
+    setQrStyle(e);
+  };
   return (
     <section className="px-[20vw] pt-20 flex flex-col justify-center items-center">
       <div className="mt-8 w-[40vw]">
@@ -49,16 +47,18 @@ const GenerateQRCode = () => {
           placeholder="https://"
           className="mb-8 mt-2"
         />
-        <Button className="" onClick={()=> handleFgColor('#FF0000')}>red</Button>
-        <Button className="" onClick={()=> handleFgColor('#000')}>black</Button>
+        <Button className="" onClick={() => handleFgColor("#FF0000")}>
+          red
+        </Button>
+        <Button className="" onClick={() => handleFgColor("#000")}>
+          black
+        </Button>
 
         <div className="mt-8">
-          <Button onClick={()=>setQrStyle('squares')}>squares</Button>
-          <Button onClick={()=>setQrStyle('dots')}>dots</Button>
+          <Button onClick={() => setQrStyle("squares")}>squares</Button>
+          <Button onClick={() => setQrStyle("dots")}>dots</Button>
         </div>
       </div>
-
-
 
       <QRCode
         value={url} // here you should keep the link/value(string) for which you are generation promocode
@@ -68,7 +68,7 @@ const GenerateQRCode = () => {
         logoWidth={80}
         logoOpacity={1}
         enableCORS={true} // enabling CORS, this is the thing that will bypass that DOM check
-        qrStyle='squares' // type of qr code, wether you want dotted ones or the square ones
+        qrStyle="squares" // type of qr code, wether you want dotted ones or the square ones
         eyeRadius={10} // radius of the promocode eye
         id={"QR"}
         fgColor={fg}
