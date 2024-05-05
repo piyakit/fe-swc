@@ -26,7 +26,7 @@ const GenerateQRCode = () => {
 
   return (
     <section className="px-[20vw] pt-20 flex flex-col justify-center items-center">
-      <div className="mt-8 w-[40vw]">
+      <div className="mt-8 mobile:w-[100vw] sm:w-[50vw] lg:w-[40vw] 2xl:w-[30vw] md:w-[30vw]">
         <Label htmlFor="terms" className="">
           Url
         </Label>
