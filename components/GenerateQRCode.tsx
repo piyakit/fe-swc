@@ -25,8 +25,8 @@ const GenerateQRCode = () => {
   const [bgQr, setBgQr] = useState("#ffffff");
 
   return (
-    <section className="px-[20vw] pt-20 flex flex-col justify-center items-center">
-      <div className="mt-8 mobile:w-[100vw] sm:w-[50vw] lg:w-[40vw] 2xl:w-[30vw] md:w-[30vw]">
+    <section className="px-[20vw] pt-20 flex flex-col justify-center items-center h-screen">
+      <div className="w-[250px] flex flex-col justify-start items-start">
         <Label htmlFor="terms" className="">
           Url
         </Label>
@@ -54,7 +54,7 @@ const GenerateQRCode = () => {
 
       <QRCode
         value={url} // here you should keep the link/value(string) for which you are generation promocode
-        size={350} // the dimension of the QR code (number)
+        size={250} // the dimension of the QR code (number)
         logoImage="/logo.png" // URL of the logo you want to use, make sure it is a dynamic url
         logoHeight={60}
         logoWidth={80}
