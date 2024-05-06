@@ -19,27 +19,17 @@ const Navbar = () => {
   return (
     <div className="flex justify-center items-center w-full h-20 px-4 text-white bg-gray-200 fixed nav">
       <div className="flex flex-row justify-start">
-        {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
-        {/* <h1 className="text-5xl font-signature ml-2"> */}
-          {/* <a
-            className="link-underline link-underline-black"
-            href=""
-            target="_blank"
-            rel="noreferrer"
-          > */}
-          <div className="flex justify-start items-center">
-            <Image
-              src={"/logo.svg"}
-              width={100}
-              height={70}
-              alt={""}
-              className="w-[150px] h-auto"
-              priority
-            />
-            <p className="text-black mr-[350px]">Jumbowire & Cable Co., Ltd.</p>
-          </div>
-          {/* </a> */}
-        {/* </h1> */}
+        <div className="flex justify-start items-end">
+          <Image
+            src={"/logo.svg"}
+            width={100}
+            height={70}
+            alt={""}
+            className="w-[150px] h-auto"
+            priority
+          />
+          <p className="text-black mr-[350px]">Jumbowire & Cable Co., Ltd.</p>
+        </div>
       </div>
 
       <ul className="hidden md:flex">
