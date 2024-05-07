@@ -14,6 +14,11 @@ const Navbar = () => {
       title: "Generate qr code",
       link: "/generate-qrcode",
     },
+    {
+      id: 2,
+      title: "QR code text",
+      link: "/qrcode-text",
+    },
   ];
 
   return (
@@ -28,7 +33,7 @@ const Navbar = () => {
             className="w-[150px] h-auto"
             priority
           />
-          <p className="text-black mr-[350px]">Jumbowire & Cable Co., Ltd.</p>
+          <p className="text-black mr-[240px]">Jumbowire & Cable Co., Ltd.</p>
         </div>
       </div>
 
