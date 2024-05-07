@@ -34,7 +34,7 @@ const Navbar = () => {
             className="w-[150px] h-auto"
             priority
           />
-          <p className="text-black text-xl">
+          <p className="text-black text-xl xs:hidden">
             Jumbowire & Cable Co., Ltd.
           </p>
         </div>
