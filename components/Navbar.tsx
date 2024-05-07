@@ -6,12 +6,13 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+
   const [nav, setNav] = useState(false);
 
   const links = [
     {
       id: 1,
-      title: "Url code |",
+      title: "Generate Url code |",
       link: "/generate-qrcode",
     },
     {
@@ -23,7 +24,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center items-center w-full h-20 px-4 text-white bg-gray-200 fixed nav">
-      <div className="flex flex-row justify-start">
+      <div className="flex flex-row justify-start mr-[240px] ">
         <div className="flex justify-start items-end">
           <Image
             src={"/logo.svg"}
@@ -33,7 +34,7 @@ const Navbar = () => {
             className="w-[150px] h-auto"
             priority
           />
-          <p className="text-black mr-[350px] text-xl">
+          <p className="text-black text-xl">
             Jumbowire & Cable Co., Ltd.
           </p>
         </div>
@@ -45,7 +46,7 @@ const Navbar = () => {
             key={id}
             className="nav-links cursor-pointer capitalize font-medium text-gray-500 hover:text-white duration-200 link-underline"
           >
-            <Link href={link} className="text-black font-bold text-xl">
+            <Link href={link} className="text-black hover:text-blue-500 text-xl">
               {title}
             </Link>
           </li>
