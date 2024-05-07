@@ -11,12 +11,12 @@ const Navbar = () => {
   const links = [
     {
       id: 1,
-      title: "Generate qr code",
+      title: "Url code |",
       link: "/generate-qrcode",
     },
     {
       id: 2,
-      title: "QR code text",
+      title: "Text code",
       link: "/qrcode-text",
     },
   ];
@@ -33,7 +33,9 @@ const Navbar = () => {
             className="w-[150px] h-auto"
             priority
           />
-          <p className="text-black mr-[240px]">Jumbowire & Cable Co., Ltd.</p>
+          <p className="text-black mr-[350px] text-xl">
+            Jumbowire & Cable Co., Ltd.
+          </p>
         </div>
       </div>
 
@@ -41,7 +43,7 @@ const Navbar = () => {
         {links.map(({ id, link, title }) => (
           <li
             key={id}
-            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200 link-underline"
+            className="nav-links cursor-pointer capitalize font-medium text-gray-500 hover:text-white duration-200 link-underline"
           >
             <Link href={link} className="text-black font-bold text-xl">
               {title}
