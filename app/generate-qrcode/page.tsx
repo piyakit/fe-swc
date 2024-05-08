@@ -4,9 +4,9 @@ import GenerateQRCode from "@/components/GenerateQRCode";
 
 const Page = () => {
   return (
-    <main className="bg-white mx-[25vw] h-screen xs:mx-[7vw]">
+    <div className="bg-white mx-[25vw]  pb-20 xs:mx-[7vw] xs:pt-4">
       <GenerateQRCode />
-    </main>
+    </div>
   );
 };
 

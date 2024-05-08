@@ -25,7 +25,7 @@ const GenerateQRCode = () => {
   const [bgQr, setBgQr] = useState("#ffffff");
 
   return (
-    <section className="px-[20vw] pt-20 flex flex-col justify-center items-center h-screen">
+    <div className="px-[20vw] pt-20 flex flex-col justify-center items-center h-screen xs:mt-4">
       <div className="w-[250px] flex flex-col justify-start items-start">
         <Label htmlFor="terms" className="">
           Url
@@ -71,7 +71,7 @@ const GenerateQRCode = () => {
       <Button onClick={downloadCode} className="mt-8">
         Download QR Code
       </Button>
-    </section>
+    </div>
   );
 };
 

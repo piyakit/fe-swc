@@ -23,7 +23,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-center items-center w-full h-20 px-4 text-white bg-gray-200 fixed nav">
+    <nav className="flex justify-center items-center w-full h-20 px-4 text-white bg-gray-200 fixed nav">
       <div className="flex flex-row justify-start mr-[240px] ">
         <div className="flex justify-start items-end">
           <Image
@@ -74,7 +74,7 @@ const Navbar = () => {
           ))}
         </ul>
       )}
-    </div>
+    </nav>
   );
 };
 
